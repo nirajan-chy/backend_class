@@ -12,3 +12,8 @@ var num1 = 66;
 
 const PI = 3.14;
 // the value of PI is 3.14 throughout the page
+
+
+
+
+// const productId
