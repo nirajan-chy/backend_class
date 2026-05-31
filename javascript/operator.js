@@ -19,3 +19,8 @@ console.log(result2);
 let num = 4;
 let n = num++;
 let m = num--;
+
+
+//  != not equal to 
+// || or 
+// && and 
