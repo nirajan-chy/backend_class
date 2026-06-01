@@ -13,3 +13,7 @@ function sub() {
 
 console.log(sub());
 
+function mul( m= 9 , n= 8) {
+  return m * n;
+}
+console.log(mul());
