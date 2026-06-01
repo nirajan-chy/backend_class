@@ -8,3 +8,7 @@
 // .a               
 // .
 // 5*10=50
+
+
+//day2  assignment 
+// Using a arrow function print prime number upto 79
