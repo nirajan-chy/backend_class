@@ -1,4 +1,5 @@
 const { User } = require("../model/user.model");
+const bcrypt = require("bcrypt");
 
 const register = async (req, res) => {
   try {
@@ -10,10 +11,12 @@ const register = async (req, res) => {
       });
     }
 
+    const hashedPassword = await bcrypt.hash(password, 10);
+    console.log(hashedPassword);
     const user = await User.create({
       name,
       email,
-      password,
+      password: hashedPassword,
     });
     res.status(201).json({
       success: true,
