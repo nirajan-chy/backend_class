@@ -132,4 +132,5 @@ module.exports = {
   login,
   getUser,
   getUserById,
+  update
 };
