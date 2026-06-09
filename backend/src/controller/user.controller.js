@@ -65,10 +65,10 @@ const login = async (req, res) => {
   }
 };
 
-const getUser = async () => {
+const getUser = async (req, res) => {
   try {
     const users = await User.find();
-    if (!user)
+    if (!users)
       return res.status(404).json({
         message: "User not available",
       });
@@ -85,8 +85,30 @@ const getUser = async () => {
   }
 };
 
+const getUserById = async (req, res) => {
+  try {
+    const user = await User.findById(req.params.id);
+    if (!user)
+      return res.status(404).json({
+        message: "User not available",
+      });
+    res.status(200).json({
+      success: true,
+      message: "user retrived successfully ",
+      data: user,
+    });
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      message: error.message,
+    });
+  }
+};
+
+
 module.exports = {
   register,
   login,
   getUser,
+  getUserById
 };
