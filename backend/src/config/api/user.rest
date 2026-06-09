@@ -18,3 +18,6 @@ Content-Type: application/json
 
 ###
 GET http://localhost:5000/api/user/getAll 
+
+###
+GET http://localhost:5000/api/user/get/6a21a80c25e5f7c424755b98
