@@ -136,6 +136,7 @@ const deleteUser = async (req, res) => {
     res.status(200).json({
       success: true,
       message: "user deleted successfully",
+      data: deleteUser,
     });
   } catch (error) {
     res.status(500).json({
@@ -151,4 +152,5 @@ module.exports = {
   getUser,
   getUserById,
   update,
+  deleteUser,
 };
