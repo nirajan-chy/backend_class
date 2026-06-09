@@ -105,10 +105,31 @@ const getUserById = async (req, res) => {
   }
 };
 
+const update = async (req, res) => {
+  try {
+    const updateUser = await User.findByIdAndUpdate(req.params.id, req.body, {
+      new: true,
+    });
+    if (!updateUser)
+      return res.status(400).json({
+        message: "User not updated",
+      });
+    res.status(200).json({
+      success: true,
+      message: "user updated successfully",
+      data: updateUser,
+    });
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      message: error.message,
+    });
+  }
+};
 
 module.exports = {
   register,
   login,
   getUser,
-  getUserById
+  getUserById,
 };
