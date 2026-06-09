@@ -126,11 +126,29 @@ const update = async (req, res) => {
     });
   }
 };
+const deleteUser = async (req, res) => {
+  try {
+    const deleteUser = await User.findByIdAndDelete(req.params.id);
+    if (!deleteUser)
+      return res.status(400).json({
+        message: "User not deleted",
+      });
+    res.status(200).json({
+      success: true,
+      message: "user deleted successfully",
+    });
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      message: error.message,
+    });
+  }
+};
 
 module.exports = {
   register,
   login,
   getUser,
   getUserById,
-  update
+  update,
 };
