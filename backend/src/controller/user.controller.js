@@ -47,7 +47,9 @@ const login = async (req, res) => {
         message: "Invalid credentials",
       });
 
-    const token =await jwt.sign({ id: user._id }, SECRET_KEY, { expiresIn: "1d" });
+    const token = await jwt.sign({ id: user._id }, SECRET_KEY, {
+      expiresIn: "1d",
+    });
 
     res.status(200).json({
       success: true,
@@ -63,7 +65,28 @@ const login = async (req, res) => {
   }
 };
 
+const getUser = async () => {
+  try {
+    const users = await User.find();
+    if (!user)
+      return res.status(404).json({
+        message: "User not available",
+      });
+    res.status(200).json({
+      success: true,
+      message: "user retrived successfully ",
+      data: users,
+    });
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      message: error.message,
+    });
+  }
+};
+
 module.exports = {
   register,
   login,
+  getUser,
 };
