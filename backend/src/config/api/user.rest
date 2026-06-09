@@ -29,3 +29,6 @@ Content-Type: application/json
 {
   "name" : "Bunny chy"
 }
+
+###
+DELETE http://localhost:5000/api/user/delete/6a21a80c25e5f7c424755b98
