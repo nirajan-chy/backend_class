@@ -33,6 +33,7 @@ Content-Type: application/json
 }
 
 ###
-DELETE http://localhost:5000/api/user/delete/6a21a80c25e5f7c424755b98
+DELETE http://localhost:5000/api/user/delete/6a21ab1e986ed1b3c0d54fc7
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMmQ4ZmI2NGI0OGViNjdlMjExNThmYyIsImlhdCI6MTc4MTM3MTc2MiwiZXhwIjoxNzgxNDU4MTYyfQ.2TctxJ7-erR97OW4wc2L9bjI_1GdJrqUHzSz9dljGqI
 
 ### 
