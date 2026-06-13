@@ -20,10 +20,12 @@ Content-Type: application/json
 GET http://localhost:5000/api/user/getAll 
 
 ###
-GET http://localhost:5000/api/user/get/6a21a80c25e5f7c424755b98
+GET http://localhost:5000/api/user/get/6a21ab1e986ed1b3c0d54fc7
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMjNmMTJhYTczNzUwMTNiNDIzMjhlOSIsImlhdCI6MTc4MTM2OTg4NywiZXhwIjoxNzgxNDU2Mjg3fQ.wveGo1qKypGfy8WwGQddtATRq04Aza2k0lvIV_pyFog
+
 
 ###
-PATCH http://localhost:5000/api/user/update/6a21a80c25e5f7c424755b98
+PATCH http://localhost:5000/api/user/update/6a21ab1e986ed1b3c0d54fc7
 Content-Type: application/json
 
 {
@@ -33,4 +35,4 @@ Content-Type: application/json
 ###
 DELETE http://localhost:5000/api/user/delete/6a21a80c25e5f7c424755b98
 
-###
+### 
